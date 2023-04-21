@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './AddExpenseForm.css'
 
 function AddExpenseForm(props) {
   const [name, setName] = useState('');
@@ -22,8 +22,8 @@ function AddExpenseForm(props) {
 
   return (
     <div>
+      <form className="add-expense-form" onSubmit={handleSubmit}>
       <h2>Add Expense</h2>
-      <form onSubmit={handleSubmit}>
         <label>
           Name:
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

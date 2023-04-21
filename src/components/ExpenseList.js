@@ -1,14 +1,17 @@
+import './ExpenseList.css';
+
+
 function ExpenseList(props) {
   const { expenses } = props;
 
   return (
-    <div>
+    <div className='expense-list'>
       <h2>Expense List</h2>
-      <ul>
+      <ul className='expense-list__list'>
         {expenses.map((expense) => (
-          <li key={expense.id}>
-            <div>{expense.name}</div>
-            <div>${expense.amount}</div>
+          <li key={expense.id} className='expense-list__item'>
+            <div className='expense-list__name'>{expense.name}</div>
+            <div className='expense-list__amount'>${expense.amount}</div>
           </li>
         ))}
       </ul>
