@@ -32,7 +32,7 @@ function AddExpenseForm(props) {
           Amount:
           <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)} />
         </label>
-        <button type="submit">Add Expense</button>
+        <button type="submit">Enter</button>
       </form>
     </div>
   );

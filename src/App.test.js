@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render, screen  } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it(' should render an expense list', () => {
+    render(<App />);
+    const listElement = screen.getByText(/Expense List/i);
+    expect(listElement).toBeInTheDocument();
+  });
+
+  it(' should render a form to add expenses', () => {
+    render(<App />);
+    const formElement = screen.queryByText(/Add Expense/i);
+    expect(formElement).toBeInTheDocument();
+  });
 });
